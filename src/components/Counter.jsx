@@ -8,7 +8,7 @@ export default function Counter() {
 
   function Increment() {
     const increment = useCounterStore((state) => state.counterIncrement);
-    return <button onClick={increment}>increment</button>;
+    return <button onClick={() => increment(1)}>increment</button>;
   }
 
   return (
