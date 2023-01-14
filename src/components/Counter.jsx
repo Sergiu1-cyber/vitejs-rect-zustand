@@ -3,7 +3,7 @@ import { useCounterStore } from '../store/counter';
 export default function Counter() {
   function Display() {
     const counter = useCounterStore((state) => state.counter);
-    return <div>Counter: {counter}</div>;
+    return <div className="text-red-500">Counter: {counter}</div>;
   }
 
   function Increment() {
@@ -12,7 +12,7 @@ export default function Counter() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col text-center">
       <Display />
       <Increment />
     </div>
